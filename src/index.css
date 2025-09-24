@@ -1,2 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+[data-theme='dark'] body {
+  background-color: hsl(var(--b1));
+}
+
+[data-theme='dark'] .navbar {
+  background-color: hsl(var(--b2));
+}
+
+[data-theme='dark'] .card.bg-base-100 {
+  background-color: hsl(var(--b2));
+  border-color: hsl(var(--b3));
+}
