@@ -1,10 +1,11 @@
+import { Link } from 'react-router';
 import ThemeController from './ThemeController';
 import appLogo from '../assets/logo.svg';
 
 export default function NavBar() {
   return (
     <>
-      <nav className="navbar bg-base-100 shadow-sm">
+      <nav className="navbar bg-base-100 border-b border-transparent shadow-sm mb-7">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -33,13 +34,13 @@ export default function NavBar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Homepage</a>
+                <Link to="/">Homepage</Link>
               </li>
               <li>
-                <a>Portfolio</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a>About</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
