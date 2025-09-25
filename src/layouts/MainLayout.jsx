@@ -16,10 +16,12 @@ export default function MainLayout() {
   }, []);
 
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <Outlet context={destinations} />
+      <main className="flex-1">
+        <Outlet context={destinations} />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }

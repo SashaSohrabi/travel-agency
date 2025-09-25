@@ -18,3 +18,15 @@
 [data-theme='dark'] .search-shell {
   border-color: hsl(var(--bc) / 0.35);
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
