@@ -15,7 +15,9 @@ export default function SearchBar({ initialDestination = '' }) {
       params.set('q', destination);
     }
 
-    navigate(`/destinations${params.toString() ? `?${params.toString()}` : ''}`);
+    navigate(
+      `/destinations${params.toString() ? `?${params.toString()}` : ''}`
+    );
   };
 
   return (
@@ -32,7 +34,7 @@ export default function SearchBar({ initialDestination = '' }) {
         name="origin"
         type="text"
         placeholder="Origin"
-        className="min-w-[9rem] flex-1 border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
+        className="hidden sm:block min-w-[9rem] flex-1 border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
       />
 
       <label className="sr-only" htmlFor="destination">
@@ -55,7 +57,7 @@ export default function SearchBar({ initialDestination = '' }) {
         name="departureDate"
         type="date"
         placeholder="dd.mm.yyyy"
-        className="min-w-[8.5rem] border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
+        className="hidden md:block min-w-[8.5rem] border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
       />
 
       <label className="sr-only" htmlFor="return-date">
@@ -66,7 +68,7 @@ export default function SearchBar({ initialDestination = '' }) {
         name="returnDate"
         type="date"
         placeholder="dd.mm.yyyy"
-        className="min-w-[8.5rem] border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
+        className="hidden sm:block min-w-[8.5rem] border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
       />
 
       <button
