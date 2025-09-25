@@ -1,8 +1,29 @@
+import { useNavigate } from 'react-router';
+
 export default function SearchBar() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    console.log([...formData.entries()]);
+    const destination = (formData.get('destination') || '').toString().trim();
+
+    const params = new URLSearchParams();
+    if (destination) {
+      params.set('q', destination);
+    }
+
+    navigate(`/destinations${params.toString() ? `?${params.toString()}` : ''}`);
+  };
+
   return (
     <form
       className="search-shell mx-auto flex w-full max-w-5xl items-stretch overflow-hidden rounded-full border border-base-300 bg-base-100 shadow-sm"
       role="search"
+      onSubmit={handleSubmit}
     >
       <label className="sr-only" htmlFor="origin">
         Origin
