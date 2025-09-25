@@ -15,8 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="/destinations" element={<Destinations />} />
-          <Route path="/destinations/:slug" element={<SingleDestination />} />
+          <Route path="/destinations">
+            <Route index element={<Destinations />} />
+            <Route path=":slug" element={<SingleDestination />} />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
