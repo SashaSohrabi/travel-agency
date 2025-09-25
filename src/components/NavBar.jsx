@@ -46,7 +46,9 @@ export default function NavBar() {
           </div>
         </div>
         <div className="navbar-center">
-          <img src={appLogo} className="logo" alt="App logo" />
+          <Link to="/">
+            <img src={appLogo} className="logo" alt="App logo" />
+          </Link>
         </div>
         <div className="navbar-end">
           <ThemeController />

@@ -10,7 +10,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-[data-theme='dark'] .card.bg-base-100 {
+[data-theme='dark'] .bg-base-100 {
   background-color: hsl(var(--b2));
   border-color: hsl(var(--b3));
 }
