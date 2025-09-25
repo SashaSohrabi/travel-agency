@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 export default function Card({ slug, title, image, description }) {
   
   return (
-    <div className="card bg-base-100 w-96 border border-base-300 shadow-sm">
+    <div className="card bg-base-100 w-full border border-base-300 shadow-sm">
       <figure className="flex items-center justify-center px-10 pt-10">
         <img
           src={image}

@@ -20,7 +20,7 @@ export default function SearchBar({ initialDestination = '' }) {
 
   return (
     <form
-      className="search-shell mx-auto flex w-full max-w-5xl items-stretch overflow-hidden rounded-full border border-base-300 bg-base-100 shadow-sm"
+      className="search-shell mx-auto mb-5 flex w-full max-w-5xl items-stretch overflow-hidden rounded-full border border-base-300 bg-base-100 shadow-sm"
       role="search"
       onSubmit={handleSubmit}
     >
