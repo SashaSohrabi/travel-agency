@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 
-export default function SearchBar() {
+export default function SearchBar({ initialDestination = '' }) {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -8,7 +8,6 @@ export default function SearchBar() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    console.log([...formData.entries()]);
     const destination = (formData.get('destination') || '').toString().trim();
 
     const params = new URLSearchParams();
@@ -44,6 +43,7 @@ export default function SearchBar() {
         name="destination"
         type="text"
         placeholder="Destination"
+        defaultValue={initialDestination}
         className="min-w-[10rem] flex-1 border-r border-base-300 bg-transparent px-6 py-4 text-sm text-base-content placeholder:text-base-content/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
       />
 
